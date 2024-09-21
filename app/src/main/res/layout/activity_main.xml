@@ -73,10 +73,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Crear cuenta"
-        app:layout_constraintEnd_toEnd0f="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottom0f="@+id/btnLogin"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
