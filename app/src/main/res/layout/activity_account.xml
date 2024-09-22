@@ -11,13 +11,13 @@
         android:id="@+id/edtFirstname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Nombres"
         android:inputType="text"
         android:text=""
-        android:hint="Nombres"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,13 +25,13 @@
         android:id="@+id/edtLastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Apellidos"
         android:inputType="text"
         android:text=""
-        android:hint="Apellidos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtFirstname" />
 
@@ -45,11 +45,12 @@
         android:hint="Correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtLastname" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/edtPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -65,15 +66,15 @@
         android:id="@+id/edtUsername2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Usuario"
         android:inputType="text"
         android:text=""
-        android:hint="Usuario"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+        app:layout_constraintTop_toBottomOf="@+id/edtPhone" />
 
     <EditText
         android:id="@+id/edtPassword2"
@@ -99,14 +100,14 @@
         app:layout_constraintTop_toBottomOf="@+id/edtPassword2">
 
         <Button
-            android:id="@+id/btnOK"
+            android:id="@+id/btnAceptar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Aceptar" />
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnCancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
