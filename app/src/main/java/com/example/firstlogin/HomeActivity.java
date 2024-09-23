@@ -2,12 +2,16 @@ package com.example.firstlogin;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.gson.Gson;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -22,7 +26,15 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
 
-        String accountEntity = getIntent().getStringExtra("ACCOUNT");
-        Log.d("HomeActivity", accountEntity);
+        String accountEntityString = getIntent().getStringExtra(LoginActivity.LOGIN_ACCOUNT);
+
+        Gson gson = new Gson();
+        AccountEntity accountEntity =  gson.fromJson(accountEntityString, AccountEntity.class);
+        String firstname = accountEntity.getFirstname();
+        String lastname = accountEntity.getLastname();
+
+        TextView textWelcome = findViewById(R.id.textWelcome);
+        textWelcome.setText("Bienvenido "+firstname+" " + lastname );
+
     }
 }

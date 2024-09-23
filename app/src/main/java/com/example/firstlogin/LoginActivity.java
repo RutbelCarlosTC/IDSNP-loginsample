@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private AccountEntity accountEntity;
     private String accountEntityString;
     private File accountsFile;
+    public static final String LOGIN_ACCOUNT = "ACCOUNT";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.d(TAG,"Bienvenido " + username);
 
                     Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
-                    intent.putExtra("ACCOUNT", accountEntityString);
+                    intent.putExtra(LOGIN_ACCOUNT, accountEntityString);
                     startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Cuenta no ecnontrada", Toast.LENGTH_LONG).show();
@@ -111,14 +112,14 @@ public class LoginActivity extends AppCompatActivity {
                         //Guardar la cuenta en el archivo
                         saveAccountToFile(accountEntityString);
 
-                        String firstname = accountEntity.getFirstname();
+                        String username = accountEntity.getUsername();
 
-                        Toast.makeText(getApplicationContext(),"Nombre: "+ firstname, Toast.LENGTH_LONG).show();
-                        Log.d("LoginActivity", "Nombre:" + firstname);
+                        Toast.makeText(getApplicationContext(),"Usuario registrado: "+ username, Toast.LENGTH_LONG).show();
+                        Log.d("LoginActivity", "Usuario registrado:" + username);
 
                     }
                     else if (resultCode==AccountActivity.ACCOUNT_CANCELAR){
-                        Toast.makeText(getApplicationContext(),"Cancelado", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this,"Cancelado", Toast.LENGTH_LONG).show();
                     }
 
                 }
